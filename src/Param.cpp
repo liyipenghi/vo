@@ -25,14 +25,24 @@ namespace VO {
     
   void Param::setParametersFile(const std::string& filename_)
   {
-     
+      if (ptr == nullptr)
+      {
+        ptr = shared_ptr<Param> (new Param());
+      }  
+      ptr->param_file = cv::FileStorage(filename_.c_str(), cv::FileStorage::READ);
+      if (!ptr->param_file.isOpened())
+      {
+         cout << "Open parameters failed!" << endl;
+         ptr->param_file.release();
+         return;
+      }
   }
   
   Param::~Param()
   {
-      if (file.isOpened())
-	file.release();
+      if (param_file.isOpened())
+	      param_file.release();
   }
 
-  
+  shared_ptr<Param> Param::ptr = nullptr;
 } // namespace VO

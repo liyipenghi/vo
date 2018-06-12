@@ -7,7 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/vo.dir/src/FeatureDetector.cpp.o"
   "CMakeFiles/vo.dir/src/Map.cpp.o"
   "CMakeFiles/vo.dir/src/RobustCost.cpp.o"
-  "CMakeFiles/vo.dir/src/FeatureAlignment.cpp.o"
   "CMakeFiles/vo.dir/src/ImageAlignment.cpp.o"
   "CMakeFiles/vo.dir/src/VisualOdometry.cpp.o"
   "libvo.pdb"

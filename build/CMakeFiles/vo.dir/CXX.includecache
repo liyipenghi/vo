@@ -16,10 +16,6 @@ Frame.h
 Point3d.h
 -
 
-../include/FeatureAlignment.h
-common.h
--
-
 ../include/FeatureDetector.h
 common.h
 -
@@ -150,10 +146,6 @@ vector
 opencv2/opencv.hpp
 -
 Camera.h
--
-
-/home/lyp/SLAM/codes/vo/src/FeatureAlignment.cpp
-FeatureAlignment.h
 -
 
 /home/lyp/SLAM/codes/vo/src/FeatureDetector.cpp

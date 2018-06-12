@@ -25,8 +25,12 @@ namespace VO {
     using namespace std;
 
     class Param {
-    public:
+	private:
+		static shared_ptr<Param> ptr;
+		cv::FileStorage param_file;
 		Param() {}
+    public:
+		
 		~Param();
 	
 		static void setParametersFile(const std::string& filename_);
@@ -34,10 +38,8 @@ namespace VO {
 		template<typename T>
 		static T get(const std::string& key_)
 		{
-			return T(Param::param->file[key_]);
+			return T(Param::ptr->param_file[key_]);
 		}
-	private:
-		
     };
 } // namespace VO
 

@@ -52,7 +52,7 @@ LIST(APPEND SOURCEFILES
     src/FeatureDetector.cpp
     src/Map.cpp
     src/RobustCost.cpp
-    src/FeatureAlignment.cpp
+#    src/FeatureAlignment.cpp
     src/ImageAlignment.cpp
     src/VisualOdometry.cpp
     )
@@ -69,8 +69,8 @@ TARGET_LINK_LIBRARIES(test_vo ${LINK_LIBS} vo)
 ADD_EXECUTABLE(test_nls test/test_nls.cpp)
 TARGET_LINK_LIBRARIES(test_nls ${LINK_LIBS} vo)
 
-ADD_EXECUTABLE(test_feat_align test/test_feature_align.cpp)
-TARGET_LINK_LIBRARIES(test_feat_align ${LINK_LIBS} vo)
+#ADD_EXECUTABLE(test_feat_align test/test_feature_align.cpp)
+#TARGET_LINK_LIBRARIES(test_feat_align ${LINK_LIBS} vo)
 
 #ADD_EXECUTABLE(runSVO src/run_svo.cpp)
 #TARGET_LINK_LIBRARIES(runSVO ${LINK_LIBS})

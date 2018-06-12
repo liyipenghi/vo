@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/lyp/SLAM/codes/vo/src/Camera.cpp" "/home/lyp/SLAM/codes/vo/build/CMakeFiles/vo.dir/src/Camera.cpp.o"
-  "/home/lyp/SLAM/codes/vo/src/FeatureAlignment.cpp" "/home/lyp/SLAM/codes/vo/build/CMakeFiles/vo.dir/src/FeatureAlignment.cpp.o"
   "/home/lyp/SLAM/codes/vo/src/FeatureDetector.cpp" "/home/lyp/SLAM/codes/vo/build/CMakeFiles/vo.dir/src/FeatureDetector.cpp.o"
   "/home/lyp/SLAM/codes/vo/src/Frame.cpp" "/home/lyp/SLAM/codes/vo/build/CMakeFiles/vo.dir/src/Frame.cpp.o"
   "/home/lyp/SLAM/codes/vo/src/ImageAlignment.cpp" "/home/lyp/SLAM/codes/vo/build/CMakeFiles/vo.dir/src/ImageAlignment.cpp.o"

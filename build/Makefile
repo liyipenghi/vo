@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named test_vo
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+test_vo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_vo
+.PHONY : test_vo
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+test_vo/fast:
+	$(MAKE) -f CMakeFiles/test_vo.dir/build.make CMakeFiles/test_vo.dir/build
+.PHONY : test_vo/fast
 
 #=============================================================================
 # Target rules for targets named vo
@@ -150,30 +150,17 @@ test_nls/fast:
 .PHONY : test_nls/fast
 
 #=============================================================================
-# Target rules for targets named test_vo
+# Target rules for targets named test
 
 # Build rule for target.
-test_vo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_vo
-.PHONY : test_vo
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-test_vo/fast:
-	$(MAKE) -f CMakeFiles/test_vo.dir/build.make CMakeFiles/test_vo.dir/build
-.PHONY : test_vo/fast
-
-#=============================================================================
-# Target rules for targets named test_feat_align
-
-# Build rule for target.
-test_feat_align: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_feat_align
-.PHONY : test_feat_align
-
-# fast build rule for target.
-test_feat_align/fast:
-	$(MAKE) -f CMakeFiles/test_feat_align.dir/build.make CMakeFiles/test_feat_align.dir/build
-.PHONY : test_feat_align/fast
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 src/Camera.o: src/Camera.cpp.o
 
@@ -201,33 +188,6 @@ src/Camera.s: src/Camera.cpp.s
 src/Camera.cpp.s:
 	$(MAKE) -f CMakeFiles/vo.dir/build.make CMakeFiles/vo.dir/src/Camera.cpp.s
 .PHONY : src/Camera.cpp.s
-
-src/FeatureAlignment.o: src/FeatureAlignment.cpp.o
-
-.PHONY : src/FeatureAlignment.o
-
-# target to build an object file
-src/FeatureAlignment.cpp.o:
-	$(MAKE) -f CMakeFiles/vo.dir/build.make CMakeFiles/vo.dir/src/FeatureAlignment.cpp.o
-.PHONY : src/FeatureAlignment.cpp.o
-
-src/FeatureAlignment.i: src/FeatureAlignment.cpp.i
-
-.PHONY : src/FeatureAlignment.i
-
-# target to preprocess a source file
-src/FeatureAlignment.cpp.i:
-	$(MAKE) -f CMakeFiles/vo.dir/build.make CMakeFiles/vo.dir/src/FeatureAlignment.cpp.i
-.PHONY : src/FeatureAlignment.cpp.i
-
-src/FeatureAlignment.s: src/FeatureAlignment.cpp.s
-
-.PHONY : src/FeatureAlignment.s
-
-# target to generate assembly for a file
-src/FeatureAlignment.cpp.s:
-	$(MAKE) -f CMakeFiles/vo.dir/build.make CMakeFiles/vo.dir/src/FeatureAlignment.cpp.s
-.PHONY : src/FeatureAlignment.cpp.s
 
 src/FeatureDetector.o: src/FeatureDetector.cpp.o
 
@@ -499,33 +459,6 @@ test/test.cpp.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test.cpp.s
 .PHONY : test/test.cpp.s
 
-test/test_feature_align.o: test/test_feature_align.cpp.o
-
-.PHONY : test/test_feature_align.o
-
-# target to build an object file
-test/test_feature_align.cpp.o:
-	$(MAKE) -f CMakeFiles/test_feat_align.dir/build.make CMakeFiles/test_feat_align.dir/test/test_feature_align.cpp.o
-.PHONY : test/test_feature_align.cpp.o
-
-test/test_feature_align.i: test/test_feature_align.cpp.i
-
-.PHONY : test/test_feature_align.i
-
-# target to preprocess a source file
-test/test_feature_align.cpp.i:
-	$(MAKE) -f CMakeFiles/test_feat_align.dir/build.make CMakeFiles/test_feat_align.dir/test/test_feature_align.cpp.i
-.PHONY : test/test_feature_align.cpp.i
-
-test/test_feature_align.s: test/test_feature_align.cpp.s
-
-.PHONY : test/test_feature_align.s
-
-# target to generate assembly for a file
-test/test_feature_align.cpp.s:
-	$(MAKE) -f CMakeFiles/test_feat_align.dir/build.make CMakeFiles/test_feat_align.dir/test/test_feature_align.cpp.s
-.PHONY : test/test_feature_align.cpp.s
-
 test/test_nls.o: test/test_nls.cpp.o
 
 .PHONY : test/test_nls.o
@@ -587,18 +520,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... test"
+	@echo "... edit_cache"
+	@echo "... test_vo"
 	@echo "... vo"
 	@echo "... test_nls"
-	@echo "... test_vo"
-	@echo "... test_feat_align"
-	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... src/Camera.o"
 	@echo "... src/Camera.i"
 	@echo "... src/Camera.s"
-	@echo "... src/FeatureAlignment.o"
-	@echo "... src/FeatureAlignment.i"
-	@echo "... src/FeatureAlignment.s"
 	@echo "... src/FeatureDetector.o"
 	@echo "... src/FeatureDetector.i"
 	@echo "... src/FeatureDetector.s"
@@ -629,9 +558,6 @@ help:
 	@echo "... test/test.o"
 	@echo "... test/test.i"
 	@echo "... test/test.s"
-	@echo "... test/test_feature_align.o"
-	@echo "... test/test_feature_align.i"
-	@echo "... test/test_feature_align.s"
 	@echo "... test/test_nls.o"
 	@echo "... test/test_nls.i"
 	@echo "... test/test_nls.s"

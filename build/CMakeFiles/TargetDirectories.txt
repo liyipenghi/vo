@@ -1,7 +1,6 @@
 /home/lyp/SLAM/codes/vo/build/CMakeFiles/rebuild_cache.dir
-/home/lyp/SLAM/codes/vo/build/CMakeFiles/test.dir
+/home/lyp/SLAM/codes/vo/build/CMakeFiles/edit_cache.dir
+/home/lyp/SLAM/codes/vo/build/CMakeFiles/test_vo.dir
 /home/lyp/SLAM/codes/vo/build/CMakeFiles/vo.dir
 /home/lyp/SLAM/codes/vo/build/CMakeFiles/test_nls.dir
-/home/lyp/SLAM/codes/vo/build/CMakeFiles/test_vo.dir
-/home/lyp/SLAM/codes/vo/build/CMakeFiles/test_feat_align.dir
-/home/lyp/SLAM/codes/vo/build/CMakeFiles/edit_cache.dir
+/home/lyp/SLAM/codes/vo/build/CMakeFiles/test.dir
